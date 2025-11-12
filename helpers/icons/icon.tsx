@@ -116,6 +116,34 @@ export const RoundedShape = () => {
   );
 };
 
+export const FullRoundShape = () => {
+  return (
+    <svg
+      className="absolute left-0 top-0"
+      width="450"
+      height="556"
+      viewBox="0 0 450 556"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="277" cy="63" r="225" fill="url(#gradient1)" />
+      <defs>
+        <linearGradient
+          id="gradient1"
+          x1="-54.5"
+          y1="-178"
+          x2="222"
+          y2="288"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#4A6CF7" />
+          <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};
+
 export const Calender = () => {
   return (
     <svg width="15" height="15" viewBox="0 0 15 15" className="fill-current">
