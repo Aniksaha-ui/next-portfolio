@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import {
   NAME,
   TITLE,
@@ -15,35 +14,25 @@ import {
 } from "@/helpers/constants/pageConst";
 import { FullRoundShape } from "@/helpers/icons/icon";
 
-// ====== CONTENT VARIABLES ======
-
 const Hero = () => {
   return (
-    <section
-      id="home"
-      className="relative z-10 overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px]"
-    >
+    <section className="relative z-10 overflow-hidden bg-gradient-to-b from-white via-blue-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-[150px] pb-[200px]">
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse items-center justify-between gap-10 md:flex-row">
           {/* ===== LEFT CONTENT ===== */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center md:text-left md:w-1/2"
-          >
-            <h1 className="text-4xl font-bold leading-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl">
+          <div className="text-center md:text-left md:w-1/2">
+            <h1 className="text-5xl font-bold leading-tight text-gray-900 dark:text-white sm:text-6xl md:text-7xl">
               Hi, I’m{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 {NAME}
               </span>
             </h1>
 
-            <h2 className="mt-3 text-lg font-semibold text-gray-700 dark:text-gray-300 sm:text-xl">
+            <h2 className="mt-3 text-xl font-semibold text-gray-700 dark:text-gray-300 sm:text-2xl">
               {TITLE}
             </h2>
 
-            <p className="mt-6 text-base text-gray-600 dark:text-gray-400 sm:text-lg leading-relaxed">
+            <p className="mt-6 text-base text-gray-600 dark:text-gray-400 sm:text-lg md:text-xl leading-relaxed">
               {DESCRIPTION}
             </p>
 
@@ -64,32 +53,27 @@ const Hero = () => {
                 {SECONDARY_BTN_TEXT}
               </Link>
             </div>
-          </motion.div>
+          </div>
 
           {/* ===== RIGHT IMAGE ===== */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="md:w-1/2 flex justify-center"
-          >
+          <div className="md:w-1/2 flex justify-center">
             <div className="relative group">
               <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 opacity-40 blur-lg transition-all duration-500 group-hover:opacity-70"></div>
               <Image
                 src={IMAGE_SRC}
                 alt={NAME}
-                width={420}
-                height={420}
+                width={450}
+                height={450}
                 className="relative rounded-full border-4 border-blue-500/20 dark:border-blue-400/30 shadow-2xl transition-transform duration-500 group-hover:scale-105"
                 priority
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* ===== BACKGROUND SHAPES ===== */}
-      <div className="absolute inset-0 -z-10 overflow-hidden opacity-30">
+      <div className="absolute inset-0 -z-10 flex justify-center opacity-30">
         <FullRoundShape />
       </div>
     </section>

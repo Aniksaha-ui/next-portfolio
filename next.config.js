@@ -2,14 +2,14 @@
 const nextConfig = {
   images: {
     // Allow images from localhost and 127.0.0.1 (for local development)
-    domains: ['127.0.0.1', 'localhost'],
+    domains: ["127.0.0.1", "localhost"],
 
     // Use remotePatterns to specify an external image domain
     remotePatterns: [
       {
-        protocol: 'https', // Use HTTPS for secure requests
-        hostname: 'cdn.sanity.io', // External image domain
-        port: '', // Default port for HTTPS
+        protocol: "https", // Use HTTPS for secure requests
+        hostname: "*", // External image domain
+        port: "", // Default port for HTTPS
       },
     ],
   },
@@ -17,9 +17,9 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 
-   typescript: {
+  typescript: {
     // Disable type checking during build. Useful if you don't want to block builds with TypeScript errors.
-    ignoreBuildErrors: true,  // Ignores TypeScript errors during build
+    ignoreBuildErrors: true, // Ignores TypeScript errors during build
   },
 };
 
