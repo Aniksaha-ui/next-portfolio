@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-interface Project {
+interface IProject {
   id: number;
   project_name: string;
   description: string;
@@ -22,7 +22,7 @@ interface Project {
 }
 
 const Projects = () => {
-  const [projects] = useState<Project[]>([
+  const [projects] = useState<IProject[]>([
     {
       id: 1,
       project_name: "Travel Booking System",
@@ -61,7 +61,7 @@ const Projects = () => {
     },
   ]);
 
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">

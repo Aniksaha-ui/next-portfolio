@@ -7,14 +7,17 @@ const starIcon = (
 );
 
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
-  const { star, name, image, content, designation } = testimonial;
+  const { rating, name, feedback, content, designation } = testimonial;
+
+  // Ensure rating is an integer (fallback to 0 if invalid) and non-negative
+  const intRating = Math.max(0, Math.floor(Number(rating) || 0));
 
   let ratingIcons = [];
-  for (let index = 0; index < star; index++) {
+  for (let index = 0; index < intRating; index++) {
     ratingIcons.push(
       <span key={index} className="text-yellow">
         {starIcon}
-      </span>,
+      </span>
     );
   }
 
@@ -26,12 +29,9 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
       >
         <div className="mb-5 flex items-center space-x-1">{ratingIcons}</div>
         <p className="mb-8 border-b border-body-color border-opacity-10 pb-8 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-10 dark:text-white">
-          “{content}
+          “{feedback}”
         </p>
         <div className="flex items-center">
-          <div className="relative mr-4 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full">
-            <Image src={image} alt={name} fill />
-          </div>
           <div className="w-full">
             <h3 className="mb-1 text-lg font-semibold text-dark dark:text-white lg:text-base xl:text-lg">
               {name}

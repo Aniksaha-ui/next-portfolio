@@ -1,8 +1,10 @@
-export type Testimonial = {
-  id: number;
+export interface Testimonial {
+  id?: string | number;
   name: string;
-  designation: string;
-  content: string;
-  image: string;
-  star: number;
-};
+  designation?: string;
+  rating?: string | number;
+  image_url?: string;
+  status?: number;
+  // allow any extra fields returned by the API
+  [key: string]: any;
+}

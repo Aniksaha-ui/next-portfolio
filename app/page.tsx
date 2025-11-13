@@ -8,6 +8,7 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Projects from "@/components/Projects";
+import Publications from "@/components/Publication";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
@@ -26,6 +27,7 @@ export default function Home() {
       <Features />
       <Blog />
       <Projects />
+      <Publications />
       {/* <Video /> */}
       {/* <Brands /> */}
       <AboutSectionOne />
