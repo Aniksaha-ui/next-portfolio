@@ -43,3 +43,9 @@ export const MONGODB_DESCRIPTION =
 export const OPEN_SOURCE = "Open Source Contribution";
 export const OPEN_SOURCE_DESCRIPTION =
   "Dynamic portfolio, travel agency, E-commerce projects on github";
+
+
+
+//testimonial 
+export const TESTIMONIAL = "Linkedin Recommendation"
+export const TESTIMONIAL_DETAILS = "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
