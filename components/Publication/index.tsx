@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
+import { RESEARCH, RESEARCH_DETAILS } from "@/helpers/constants/pageConst";
 
 interface Publication {
   id: number;
@@ -64,8 +65,8 @@ const Publications = () => {
 
       <div className="container relative z-10">
         <SectionTitle
-          title="Our Research & Publications"
-          paragraph="Explore our latest contributions to technology and science. Each publication reflects our commitment to innovation and quality."
+          title={RESEARCH}
+          paragraph={RESEARCH_DETAILS}
           center
         />
 

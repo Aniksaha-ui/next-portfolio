@@ -49,3 +49,21 @@ export const OPEN_SOURCE_DESCRIPTION =
 //testimonial 
 export const TESTIMONIAL = "Linkedin Recommendation"
 export const TESTIMONIAL_DETAILS = "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+
+
+
+// research
+
+export const RESEARCH = "My Research Paper"
+export const RESEARCH_DETAILS = "Explore my research paper. If any suggestion contact with me"
+
+//about
+
+export const ABOUT_ME = "Crafted for Startup, SaaS and Business Sites."
+export const  ABOUT_ME_DESCRIPTION= "The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+export const SKILLS = "REACT JS"
+export const SKILLS_2 = "Angular JS"
+export const SKILLS_3 = "LARAVEL"
+export const SKILLS_4 = "NODE JS"
+export const SKILLS_5 = "App Development"
+export const SKILLS_6 = "Next JS"
