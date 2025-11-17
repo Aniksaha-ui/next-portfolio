@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 interface IProject {
@@ -22,44 +22,41 @@ interface IProject {
 }
 
 const Projects = () => {
-  const [projects] = useState<IProject[]>([
-    {
-      id: 1,
-      project_name: "Travel Booking System",
-      description:
-        "A full-featured travel booking platform with bus, flight, and hotel management.",
-      website_link: "https://travel.example.com",
-      frontend_tech: "React, Tailwind CSS",
-      backend_tech: "Laravel, Node.js",
-      database: "MySQL",
-      github_link: "https://github.com/anik/travel-booking",
-      image: "/images/projects/travel-booking.png",
-      no_of_developers: 3,
-      developers_name: "Anik Saha, John Doe, Jane Doe",
-      start_date: "2024-01-01",
-      end_date: "2024-05-01",
-      isPublished: true,
-      published_at: "2024-05-05",
-    },
-    {
-      id: 2,
-      project_name: "Fintech Dashboard",
-      description:
-        "An interactive dashboard for financial management, transactions, and reporting.",
-      website_link: "https://fintech.example.com",
-      frontend_tech: "React, Ant Design",
-      backend_tech: "Laravel, Node.js",
-      database: "MongoDB",
-      github_link: "https://github.com/anik/fintech-dashboard",
-      image: "/images/projects/fintech-dashboard.png",
-      no_of_developers: 2,
-      developers_name: "Anik Saha, John Doe",
-      start_date: "2024-06-01",
-      end_date: "2024-09-01",
-      isPublished: true,
-      published_at: "2024-09-05",
-    },
-  ]);
+  const [projects,setProjects] = useState<IProject[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+  
+    // Fetch blogs from API
+    useEffect(() => {
+      const fetchProjects = async () => {
+        try {
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_API_URL}/users/projects`,
+            {
+              method: "GET",
+              headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+              },
+            }
+          );
+  
+          const data = await response.json();
+          if (data && data.isExecuted === true) {
+            setProjects(data.data.data);
+          }
+        } catch (error) {
+          setError(error.message);
+        } finally {
+          setLoading(false);
+        }
+      };
+  
+      fetchProjects();
+    }, []);
+
+
+
 
   const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 
