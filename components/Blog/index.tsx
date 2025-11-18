@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
+import { BLOGS, BLOGS_DESCRIPTION } from "@/helpers/constants/pageConst";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -45,8 +46,8 @@ const Blog = () => {
       >
         <div className="container">
           <SectionTitle
-            title="Our Latest Blogs"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title={BLOGS}
+            paragraph={BLOGS_DESCRIPTION}
             center
           />
           <li className="flex items-center">
@@ -84,8 +85,8 @@ const Blog = () => {
       >
         <div className="container">
           <SectionTitle
-            title="Our Latest Blogs"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title={BLOGS}
+            paragraph={BLOGS_DESCRIPTION}
             center
           />
           <div>Error: {error}</div>
@@ -101,8 +102,8 @@ const Blog = () => {
     >
       <div className="container">
         <SectionTitle
-          title="Our Latest Blogs"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          title={BLOGS}
+          paragraph={BLOGS_DESCRIPTION}
           center
         />
 

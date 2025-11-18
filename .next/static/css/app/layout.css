@@ -729,6 +729,12 @@ input#checkboxLabel:checked ~ .box span{
 .z-\[99\]{
   z-index: 99;
 }
+.order-1{
+  order: 1;
+}
+.order-2{
+  order: 2;
+}
 .m-0{
   margin: 0px;
 }
@@ -843,6 +849,9 @@ input#checkboxLabel:checked ~ .box span{
 .mt-\[6px\]{
   margin-top: 6px;
 }
+.mt-2{
+  margin-top: 0.5rem;
+}
 .block{
   display: block;
 }
@@ -941,6 +950,13 @@ input#checkboxLabel:checked ~ .box span{
 }
 .h-px{
   height: 1px;
+}
+.h-48{
+  height: 12rem;
+}
+.h-fit{
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .max-h-\[90vh\]{
   max-height: 90vh;
@@ -1051,6 +1067,10 @@ input#checkboxLabel:checked ~ .box span{
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.rotate-180{
+  --tw-rotate: 180deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -1082,6 +1102,9 @@ input#checkboxLabel:checked ~ .box span{
 }
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-col{
   flex-direction: column;
@@ -1119,6 +1142,9 @@ input#checkboxLabel:checked ~ .box span{
 .gap-8{
   gap: 2rem;
 }
+.gap-3{
+  gap: 0.75rem;
+}
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -1143,6 +1169,11 @@ input#checkboxLabel:checked ~ .box span{
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 .overflow-hidden{
   overflow: hidden;
@@ -1227,6 +1258,17 @@ input#checkboxLabel:checked ~ .box span{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
+.border-body-color\/20{
+  border-color: rgb(120 130 147 / 0.2);
+}
+.border-gray-300{
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+}
+.border-primary{
+  --tw-border-opacity: 1;
+  border-color: rgb(74 108 247 / var(--tw-border-opacity));
+}
 .border-opacity-10{
   --tw-border-opacity: 0.1;
 }
@@ -1297,6 +1339,14 @@ input#checkboxLabel:checked ~ .box span{
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-red-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+.bg-gray-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 .\!bg-opacity-80{
   --tw-bg-opacity: 0.8 !important;
@@ -1467,6 +1517,9 @@ input#checkboxLabel:checked ~ .box span{
 .p-8{
   padding: 2rem;
 }
+.p-4{
+  padding: 1rem;
+}
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1601,6 +1654,12 @@ input#checkboxLabel:checked ~ .box span{
 }
 .pt-\[180px\]{
   padding-top: 180px;
+}
+.pt-4{
+  padding-top: 1rem;
+}
+.text-left{
+  text-align: left;
 }
 .text-center{
   text-align: center;
@@ -1741,6 +1800,18 @@ input#checkboxLabel:checked ~ .box span{
   --tw-text-opacity: 1;
   color: rgb(251 176 64 / var(--tw-text-opacity));
 }
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.text-green-700{
+  --tw-text-opacity: 1;
+  color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+.text-red-700{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
 .underline{
   text-decoration-line: underline;
 }
@@ -1761,6 +1832,9 @@ input#checkboxLabel:checked ~ .box span{
 }
 .opacity-70{
   opacity: 0.7;
+}
+.opacity-75{
+  opacity: 0.75;
 }
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
@@ -1896,6 +1970,9 @@ input#checkboxLabel:checked ~ .box span{
 .duration-500{
   transition-duration: 500ms;
 }
+.duration-200{
+  transition-duration: 200ms;
+}
 .ease-in-out{
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1952,6 +2029,11 @@ input#checkboxLabel:checked ~ .box span{
 .hover\:bg-white:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-200:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-opacity-100:hover{
@@ -2026,6 +2108,12 @@ input#checkboxLabel:checked ~ .box span{
 .hover\:shadow-two:hover{
   --tw-shadow: 0px 5px 10px rgba(6, 8, 15, 0.1);
   --tw-shadow-colored: 0px 5px 10px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:shadow-xl:hover{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -2108,6 +2196,10 @@ input#checkboxLabel:checked ~ .box span{
   border-color: rgb(255 255 255 / .15);
 }
 
+:is(.dark .dark\:border-white\/20){
+  border-color: rgb(255 255 255 / 0.2);
+}
+
 :is(.dark .dark\:border-opacity-10){
   --tw-border-opacity: 0.1;
 }
@@ -2154,6 +2246,16 @@ input#checkboxLabel:checked ~ .box span{
 :is(.dark .dark\:bg-white){
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-green-700){
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-red-700){
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:from-gray-900){
@@ -2309,6 +2411,12 @@ input#checkboxLabel:checked ~ .box span{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+:is(.dark .dark\:shadow-lg){
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 :is(.dark .dark\:drop-shadow-none){
   --tw-drop-shadow: drop-shadow(0 0 #0000);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -2331,6 +2439,11 @@ input#checkboxLabel:checked ~ .box span{
 
 :is(.dark .dark\:hover\:bg-primary\/5:hover){
   background-color: rgb(74 108 247 / 0.05);
+}
+
+:is(.dark .dark\:hover\:bg-gray-700:hover){
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:hover\:text-primary:hover){
@@ -2389,6 +2502,10 @@ input#checkboxLabel:checked ~ .box span{
     margin-left: 0.75rem;
   }
 
+  .sm\:mt-0{
+    margin-top: 0px;
+  }
+
   .sm\:block{
     display: block;
   }
@@ -2427,6 +2544,10 @@ input#checkboxLabel:checked ~ .box span{
 
   .sm\:justify-end{
     justify-content: flex-end;
+  }
+
+  .sm\:justify-between{
+    justify-content: space-between;
   }
 
   .sm\:p-11{
@@ -2643,6 +2764,14 @@ input#checkboxLabel:checked ~ .box span{
     top: 110%;
   }
 
+  .lg\:order-1{
+    order: 1;
+  }
+
+  .lg\:order-2{
+    order: 2;
+  }
+
   .lg\:m-0{
     margin: 0px;
   }
@@ -2727,12 +2856,24 @@ input#checkboxLabel:checked ~ .box span{
     width: 100%;
   }
 
+  .lg\:w-1\/3{
+    width: 33.333333%;
+  }
+
+  .lg\:w-2\/3{
+    width: 66.666667%;
+  }
+
   .lg\:max-w-\[130px\]{
     max-width: 130px;
   }
 
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
   }
 
   .lg\:gap-x-8{
@@ -2764,6 +2905,10 @@ input#checkboxLabel:checked ~ .box span{
 
   .lg\:p-8{
     padding: 2rem;
+  }
+
+  .lg\:p-5{
+    padding: 1.25rem;
   }
 
   .lg\:px-0{
@@ -2945,6 +3090,10 @@ input#checkboxLabel:checked ~ .box span{
 
   .xl\:p-\[55px\]{
     padding: 55px;
+  }
+
+  .xl\:p-7{
+    padding: 1.75rem;
   }
 
   .xl\:px-5{

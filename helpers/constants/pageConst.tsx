@@ -59,11 +59,24 @@ export const RESEARCH_DETAILS = "Explore my research paper. If any suggestion co
 
 //about
 
-export const ABOUT_ME = "Crafted for Startup, SaaS and Business Sites."
-export const  ABOUT_ME_DESCRIPTION= "The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
+export const ABOUT_ME = "Anik Saha"
+export const  ABOUT_ME_DESCRIPTION= "I am Anik Saha, a dedicated Software Engineer with hands-on experience in both frontend and backend development. I currently work at SSL Wireless, where I manage payment gateway systems and contribute to building secure and scalable FINTECH solutions.I enjoy creating efficient, user-focused applications."
 export const SKILLS = "REACT JS"
 export const SKILLS_2 = "Angular JS"
 export const SKILLS_3 = "LARAVEL"
 export const SKILLS_4 = "NODE JS"
 export const SKILLS_5 = "App Development"
 export const SKILLS_6 = "Next JS"
+
+
+
+//blogs
+
+export const BLOGS = "My Blogs"
+export const BLOGS_DESCRIPTION = "Discover helpful articles, tips, and insights designed to guide you through technology, development, and practical solutions."
+
+
+
+//training
+export const TRAINING = "My Training"
+export const TRAINING_DESCRIPTION = "Explore my training sessions and certifications to enhance your skills and knowledge in various domains."

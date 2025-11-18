@@ -76,7 +76,7 @@ const Projects = () => {
               {project.image && (
                 <div className="relative h-56 w-full overflow-hidden">
                   <Image
-                    src="https://imgs.search.brave.com/HKge-kAoibDDAH668tPtjGKAAhe0EJyWdiQazOvHaAE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvcHJldmll/dy0xeC80My8wNy9p/bmZvZ3JhcGhpYy1k/YXNoYm9hcmQtZmlu/YW5jZS1hcHBsaWNh/dGlvbi1jaGFydHMt/dmVjdG9yLTI3NTM0/MzA3LmpwZw"
+                    src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${project.image}`}
                     alt={project.project_name}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -156,7 +156,7 @@ const Projects = () => {
             {selectedProject.image && (
               <div className="relative h-64 w-full mb-6 rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="https://imgs.search.brave.com/Nz_bzdYEM-FGkDA8a48YLhfmNORjpyN06DFsk8PZAlA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9taXIt/czMtY2RuLWNmLmJl/aGFuY2UubmV0L3By/b2plY3RzLzQwNC9j/NTcwYzcyMzE0Nzg2/OTEuWTNKdmNDd3pP/RE0xTERNd01EQXNP/RFVzTUEucG5n"
+                  src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${selectedProject.image}`}
                   alt={selectedProject.project_name}
                   fill
                   className="object-cover"
