@@ -48,7 +48,7 @@ export const OPEN_SOURCE_DESCRIPTION =
 
 //testimonial 
 export const TESTIMONIAL = "Linkedin Recommendation"
-export const TESTIMONIAL_DETAILS = "There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+export const TESTIMONIAL_DETAILS = "My managers and teammates have consistently recommended me for my problem-solving skills, leadership qualities, and dedication to achieving organizational goals"
 
 
 
@@ -73,7 +73,7 @@ export const SKILLS_6 = "Next JS"
 //blogs
 
 export const BLOGS = "My Blogs"
-export const BLOGS_DESCRIPTION = "Discover helpful articles, tips, and insights designed to guide you through technology, development, and practical solutions."
+export const BLOGS_DESCRIPTION = "Discover helpful articles, tips, and insights designed to guide you through technology, development, and practical solutions.Discover smart tips, helpful articles, and actionable insights that simplify technology, development, and everyday technical challenges."
 
 
 

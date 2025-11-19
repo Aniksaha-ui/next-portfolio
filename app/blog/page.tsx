@@ -14,10 +14,7 @@ export const metadata: Metadata = {
 const Blog = () => {
   return (
     <>
-      <Breadcrumb
-        pageName=""
-        description=""
-      />
+      <Breadcrumb pageName="" description="" />
       <BlogContent />
     </>
   );

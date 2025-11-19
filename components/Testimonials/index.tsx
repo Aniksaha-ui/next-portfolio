@@ -4,7 +4,10 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
 import { useState, useEffect } from "react";
 import { UserSpace, UserSpaceOnUse } from "@/helpers/icons/icon";
-import { TESTIMONIAL, TESTIMONIAL_DETAILS } from "@/helpers/constants/pageConst";
+import {
+  TESTIMONIAL,
+  TESTIMONIAL_DETAILS,
+} from "@/helpers/constants/pageConst";
 
 const Testimonials = () => {
   const [testimonialData, settestimonial] = useState<Testimonial[]>([]);
@@ -60,7 +63,7 @@ const Testimonials = () => {
         <UserSpace />
       </div>
       <div className="absolute bottom-5 left-0 z-[-1]">
-          <UserSpaceOnUse />
+        <UserSpaceOnUse />
       </div>
     </section>
   );

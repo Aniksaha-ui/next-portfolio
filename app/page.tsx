@@ -29,11 +29,7 @@ export default function Home() {
       <Projects />
       <Publications />
       {/* <Video /> */}
-      {/* <Brands /> */}
-      <AboutSectionOne />
-      {/* <AboutSectionTwo /> */}
       <Testimonials />
-      <Pricing />
       <Contact />
     </>
   );

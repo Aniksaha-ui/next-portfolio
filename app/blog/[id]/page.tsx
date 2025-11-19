@@ -94,11 +94,13 @@ const BlogDetailsPage = () => {
                   <div className="mb-5 mr-10 flex items-center">
                     <div className="mr-4">
                       <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                        <Image
-                          src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${blogDetails?.image}`}
-                          alt="author"
-                          fill
-                        />
+                        {blogDetails?.image && (
+                          <Image
+                            src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${blogDetails?.image}`}
+                            alt="author"
+                            fill
+                          />
+                        )}
                       </div>
                     </div>
                     <div className="w-full">
