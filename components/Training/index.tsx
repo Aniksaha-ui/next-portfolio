@@ -52,7 +52,7 @@ const Training = () => {
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {trainingData.map((training: Testimonial) => (
+          {trainingData && trainingData.map((training: Testimonial) => (
             <SingleTraining key={training.id} training={training} />
           ))}
         </div>
