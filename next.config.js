@@ -2,7 +2,7 @@
 const nextConfig = {
   images: {
     // Allow images from localhost and 127.0.0.1 (for local development)
-    domains: ["127.0.0.1", "localhost"],
+    domains: ["127.0.0.1", "localhost","https://dev-anik-api.infinitycodehubltd.com"],
 
     // Use remotePatterns to specify an external image domain
     remotePatterns: [
