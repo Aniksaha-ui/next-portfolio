@@ -22,41 +22,38 @@ interface IProject {
 }
 
 const Projects = () => {
-  const [projects,setProjects] = useState<IProject[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-  
-    // Fetch blogs from API
-    useEffect(() => {
-      const fetchProjects = async () => {
-        try {
-          const response = await fetch(
-            `${process.env.NEXT_PUBLIC_API_URL}/users/projects`,
-            {
-              method: "GET",
-              headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-              },
-            }
-          );
-  
-          const data = await response.json();
-          if (data && data.isExecuted === true) {
-            setProjects(data.data.data);
+  const [projects, setProjects] = useState<IProject[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch blogs from API
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/users/projects`,
+          {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
           }
-        } catch (error) {
-          setError(error.message);
-        } finally {
-          setLoading(false);
+        );
+
+        const data = await response.json();
+        if (data && data.isExecuted === true) {
+          setProjects(data.data.data);
         }
-      };
-  
-      fetchProjects();
-    }, []);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-
-
+    fetchProjects();
+  }, []);
 
   const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 
@@ -68,70 +65,71 @@ const Projects = () => {
         </h2>
 
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="relative group rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-2xl transition-shadow duration-300"
-            >
-              {project.image && (
-                <div className="relative h-56 w-full overflow-hidden">
-                  <Image
-                    src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${project.image}`}
-                    alt={project.project_name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-              )}
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors duration-300">
-                  {project.project_name}
-                </h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  {project.description}
-                </p>
+          {projects &&
+            projects.map((project) => (
+              <div
+                key={project.id}
+                className="relative group rounded-xl overflow-hidden shadow-lg bg-white dark:bg-gray-800 hover:shadow-2xl transition-shadow duration-300"
+              >
+                {project.image && (
+                  <div className="relative h-56 w-full overflow-hidden">
+                    <Image
+                      src={`${process.env.NEXT_PUBLIC_IMAGE_URL}/${project.image}`}
+                      alt={project.project_name}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                )}
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-500 transition-colors duration-300">
+                    {project.project_name}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    {project.description}
+                  </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full">
-                    {project.frontend_tech}
-                  </span>
-                  <span className="px-3 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full">
-                    {project.backend_tech}
-                  </span>
-                  <span className="px-3 py-1 text-sm font-medium bg-purple-100 text-purple-800 rounded-full">
-                    {project.database}
-                  </span>
-                </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded-full">
+                      {project.frontend_tech}
+                    </span>
+                    <span className="px-3 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full">
+                      {project.backend_tech}
+                    </span>
+                    <span className="px-3 py-1 text-sm font-medium bg-purple-100 text-purple-800 rounded-full">
+                      {project.database}
+                    </span>
+                  </div>
 
-                <div className="flex justify-between items-center mt-4">
-                  <a
-                    href={project.website_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
-                  >
-                    Visit Site
-                  </a>
-                  <a
-                    href={project.github_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 text-sm font-medium bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
-                  >
-                    GitHub
-                  </a>
-                  {/* Modal Button */}
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="px-4 py-2 text-sm font-medium bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
-                  >
-                    View Details
-                  </button>
+                  <div className="flex justify-between items-center mt-4">
+                    <a
+                      href={project.website_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 text-sm font-medium bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                    >
+                      Visit Site
+                    </a>
+                    <a
+                      href={project.github_link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 text-sm font-medium bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
+                    >
+                      GitHub
+                    </a>
+                    {/* Modal Button */}
+                    <button
+                      onClick={() => setSelectedProject(project)}
+                      className="px-4 py-2 text-sm font-medium bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"
+                    >
+                      View Details
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
 

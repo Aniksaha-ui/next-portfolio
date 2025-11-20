@@ -68,9 +68,10 @@ const Publications = () => {
         <SectionTitle title={RESEARCH} paragraph={RESEARCH_DETAILS} center />
 
         <div className="grid gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3">
-          {publicationData.map((pub: Publication) => (
-            <SinglePublication key={pub.id} {...pub} />
-          ))}
+          {publicationData &&
+            publicationData.map((pub: Publication) => (
+              <SinglePublication key={pub.id} {...pub} />
+            ))}
         </div>
       </div>
     </section>

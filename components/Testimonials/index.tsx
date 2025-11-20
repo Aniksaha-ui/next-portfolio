@@ -54,9 +54,13 @@ const Testimonials = () => {
         />
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          {testimonialData.map((testimonial: Testimonial) => (
-            <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
-          ))}
+          {testimonialData &&
+            testimonialData.map((testimonial: Testimonial) => (
+              <SingleTestimonial
+                key={testimonial.id}
+                testimonial={testimonial}
+              />
+            ))}
         </div>
       </div>
       <div className="absolute right-0 top-5 z-[-1]">

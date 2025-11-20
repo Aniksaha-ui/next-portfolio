@@ -3,7 +3,7 @@ export const NAME = "Anik Saha";
 export const TITLE = "Software Engineer | Full Stack Developer";
 export const DESCRIPTION =
   "I specialize in creating modern web applications using React, Node.js, and Laravel. I love building scalable systems and solving real-world problems through technology.";
-export const IMAGE_SRC = "/images/hero/profile.jpeg";
+export const IMAGE_SRC = "/images/hero/Anik.jpeg";
 export const PRIMARY_BTN_TEXT = "🚀 View My Projects";
 export const PRIMARY_BTN_LINK = "/#projects";
 export const SECONDARY_BTN_TEXT = "📩 Contact Me";
@@ -44,39 +44,36 @@ export const OPEN_SOURCE = "Open Source Contribution";
 export const OPEN_SOURCE_DESCRIPTION =
   "Dynamic portfolio, travel agency, E-commerce projects on github";
 
-
-
-//testimonial 
-export const TESTIMONIAL = "Linkedin Recommendation"
-export const TESTIMONIAL_DETAILS = "My managers and teammates have consistently recommended me for my problem-solving skills, leadership qualities, and dedication to achieving organizational goals"
-
-
+//testimonial
+export const TESTIMONIAL = "Linkedin Recommendation";
+export const TESTIMONIAL_DETAILS =
+  "My managers and teammates have consistently recommended me for my problem-solving skills, leadership qualities, and dedication to achieving organizational goals";
 
 // research
 
-export const RESEARCH = "My Research Paper"
-export const RESEARCH_DETAILS = "Explore my research paper. If any suggestion contact with me"
+export const RESEARCH = "My Research Paper";
+export const RESEARCH_DETAILS =
+  "Explore my research paper. If any suggestion contact with me";
 
 //about
 
-export const ABOUT_ME = "Anik Saha"
-export const  ABOUT_ME_DESCRIPTION= "I am Anik Saha, a dedicated Software Engineer with hands-on experience in both frontend and backend development. I currently work at SSL Wireless, where I manage payment gateway systems and contribute to building secure and scalable FINTECH solutions.I enjoy creating efficient, user-focused applications."
-export const SKILLS = "REACT JS"
-export const SKILLS_2 = "Angular JS"
-export const SKILLS_3 = "LARAVEL"
-export const SKILLS_4 = "NODE JS"
-export const SKILLS_5 = "App Development"
-export const SKILLS_6 = "Next JS"
-
-
+export const ABOUT_ME = "Anik Saha";
+export const ABOUT_ME_DESCRIPTION =
+  "I am Anik Saha, a dedicated Software Engineer with hands-on experience in both frontend and backend development. I currently work at SSL Wireless, where I manage payment gateway systems and contribute to building secure and scalable FINTECH solutions.I enjoy creating efficient, user-focused applications.";
+export const SKILLS = "REACT JS";
+export const SKILLS_2 = "Angular JS";
+export const SKILLS_3 = "LARAVEL";
+export const SKILLS_4 = "NODE JS";
+export const SKILLS_5 = "App Development";
+export const SKILLS_6 = "Next JS";
 
 //blogs
 
-export const BLOGS = "My Blogs"
-export const BLOGS_DESCRIPTION = "Discover helpful articles, tips, and insights designed to guide you through technology, development, and practical solutions.Discover smart tips, helpful articles, and actionable insights that simplify technology, development, and everyday technical challenges."
-
-
+export const BLOGS = "My Blogs";
+export const BLOGS_DESCRIPTION =
+  "Discover helpful articles, tips, and insights designed to guide you through technology, development, and practical solutions.Discover smart tips, helpful articles, and actionable insights that simplify technology, development, and everyday technical challenges.";
 
 //training
-export const TRAINING = "My Training"
-export const TRAINING_DESCRIPTION = "Explore my training sessions and certifications to enhance your skills and knowledge in various domains."
+export const TRAINING = "My Training";
+export const TRAINING_DESCRIPTION =
+  "Explore my training sessions and certifications to enhance your skills and knowledge in various domains.";
