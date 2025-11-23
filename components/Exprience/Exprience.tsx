@@ -82,7 +82,7 @@ const Experience = () => {
         className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28"
       >
         <div className="container">
-          <SectionTitle title={BLOGS} paragraph={BLOGS_DESCRIPTION} center />
+          <SectionTitle title={EXPERIENCE} paragraph={EXPERIENCE_DESCRIPTION} center />
           <div>Error: {error}</div>
         </div>
       </section>
