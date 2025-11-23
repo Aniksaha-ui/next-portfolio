@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
-import { BLOGS, BLOGS_DESCRIPTION } from "@/helpers/constants/pageConst";
+import { BLOGS, BLOGS_DESCRIPTION, EXPERIENCE, EXPERIENCE_DESCRIPTION } from "@/helpers/constants/pageConst";
 import SingleExperience from "./SingleExperience";
 
 const Experience = () => {
@@ -47,7 +47,7 @@ const Experience = () => {
         className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28"
       >
         <div className="container">
-          <SectionTitle title={BLOGS} paragraph={BLOGS_DESCRIPTION} center />
+          <SectionTitle title={EXPERIENCE} paragraph={EXPERIENCE_DESCRIPTION} center />
           <li className="flex items-center">
             <div role="status">
               <svg

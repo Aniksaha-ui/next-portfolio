@@ -77,3 +77,9 @@ export const BLOGS_DESCRIPTION =
 export const TRAINING = "My Training";
 export const TRAINING_DESCRIPTION =
   "Explore my training sessions and certifications to enhance your skills and knowledge in various domains.";
+
+
+  //experience
+export const EXPERIENCE = "My Experience";
+export const EXPERIENCE_DESCRIPTION =
+  "Explore my professional experience and career journey in the tech industry.";
